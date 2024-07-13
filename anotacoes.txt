@@ -1,0 +1,108 @@
+### Lógica de programação ###
+        O que é?
+    1. Coerência de raciocínio, de ideias;
+    2. Sequencia coerente, regular e necessária de acontecimentos, coisas.
+
+    Contextualizar a lógica, buscando a melhor sequência de ações para solucionar um problema.
+
+        Metacognição
+    Pensar como você pensa
+
+        Abstração
+    concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes.
+
+    Ex Final:
+        N1: 5
+        N2: 7
+        N3: 10
+        N4: 3
+        Média: (N1 + N2 + N3 + N4)/4
+
+    ## Algoritmos ##
+        Ex: Início-dia
+                Acordei
+                Levantei da cama
+                Troquei de roupa
+                Escovei os dentes
+                Fui a padaria
+                Tomei café
+                Escovei os dentes
+                Fui ao trabalho
+                ...
+            Fim-dia
+    ## Pseudocódigo ##
+        Portugol
+        Ex (Jogo de lógica: Ovelha, lobo e repolho):
+            Início-algoritmo
+                Pegar Ovelha
+                Atravessar (adiante)
+                Deixar Ovelha
+                Atravessar (voltar)
+                Pegar repolho
+                Atravessar (adiante)
+                Deixar repolho
+                Pegar Ovelha
+                Atravessar (voltar)
+                Deixar Ovelha
+                Pegar lobo
+                Atravessar (adiante)
+                Deixar lobo
+                Atravessar (voltar)
+                Pegar Ovelha
+                Atravessar (adiante)
+                Deixar Ovelha
+            Fim-algoritmo
+    ## Fluxograma ##
+    Documentação dos passos necessários para execução do programa.
+
+### Estrutura de Dados ###
+    # O que é? #
+        Organizar os dados na memória, para que sejam utilizadas de forma correta.
+    # Algoritmos #
+        Conjunto de instruções estruturadas e ordenadas.
+            ** Operações básicas:   
+                Inserir Dados, 
+                Excluir Dados, 
+                Localizar um elemento, 
+                Percorrer todos os itens constituintes da estrutura para visualização, 
+                Classificar, que se resume em colocar os itens de dados em uma determinada ordem (numérica, alfabética, etc.).
+    # Principais estruturas de dados #
+        (https://portugol.dev/)
+        1. Vetores e Matrizes
+            Vetor - Armazena várias variáveis do mesmo tipo, indexado.
+            Matriz - Vetor de Vetores, 2 ou mais dimensões.
+        2. Registro
+            Array que permite amazenar mais de um tipo de dado na mesma variável.
+            Seus campos podem ser acessados usando o ponto (.) Ex (Registro: livro): livro.preco
+        3. Lista
+            Possuem tamanho ajustável, enquanto arrays, tamanho fixo.
+            3.1 Ligadas
+                Cada nó, conhece os nós posteriores, só pode ser adicionado valores ao fim da lista.
+            3.2 Duplamente ligadas
+                Bi-direcional, pode ser adicionado valores, tanto no fim, quanto no começo.
+        4. Pilha (Stack)
+            4.1 LIFO ou UEPS (Last in First out ou Ultimo a entrar Primeiro a sair) - Push - Inserir | Pop - Retirar ultimo da lista
+            4.2 FIFO ou PEPS (First in First out ou Primeiro a entrar Primeiro a sair) - Enqueue - Inserir | Dequeue - Retirar primeiro da lista
+        5. Filas
+            Adimite remoção e inserção de elementos novos seguindo a regra FIFO.
+        6. Árvore
+            Organiza seus elementos de forma hierárquica, onde um fica no topo (raiz) e elementos subordinados a ele, que são chamados de nós ou folhas.
+                Ex: [2, 8, 12, 15, 20, 23, 30] -- 15 seria a Raiz (meio da lista), facilita a busca
+        7. Tabela Hash
+            Usa Hashing para espalhar os elementos, fazendo com que os mesmo fiquem de forma não ordenada dentro do "array" que define a tabela
+            # Por que espalhar? #
+                A tabela hash permite a associação de "valores" a "chaves"
+                Valores: é a posição ou índice onde o elemento se encontra
+                Chave: Parte da informação que compõe o elemento a ser manipulado
+        8. Grafos
+            São estruturas que permitem programar a relação entre objetos
+            Os objetos são os vértices ou "nós" do grafo
+            Os relacionamentos são as arestas
+            EX: Grafo
+                6
+                 \
+                   4 -- 5
+                   |    |\
+                   |    | 1
+                   |    |/
+                   3 -- 2
