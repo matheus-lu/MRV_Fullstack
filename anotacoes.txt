@@ -106,3 +106,14 @@
                    |    | 1
                    |    |/
                    3 -- 2
+
+### HTML5, CSS3, JS ###
+    Tim Berners-Lee - Criador {HTML1: 1991, HTML2: 1995, HTML3: 1997, HTML4: 1997, HTML5: 2014}
+    Elemento === Tag de abertura, atributo, conteudo, tag de fechamento
+    
+    ## CSS ##
+        Cria regras de estilos para os seletores através de declarações.
+
+        ** Border: largura estilo cor;
+        * Web safe fonts
+        ** list-style-type
