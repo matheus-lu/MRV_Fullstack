@@ -107,7 +107,7 @@
                    |    |/
                    3 -- 2
 
-### HTML5, CSS3, JS ###
+### HTML5, CSS3, BOOTSTRAP, JS ###
     Tim Berners-Lee - Criador {HTML1: 1991, HTML2: 1995, HTML3: 1997, HTML4: 1997, HTML5: 2014}
     Elemento === Tag de abertura, atributo, conteudo, tag de fechamento
     
@@ -117,3 +117,8 @@
         ** Border: largura estilo cor;
         * Web safe fonts
         ** list-style-type
+    
+    ## Bootstrap ##
+        * Framework para desenvolvimento de sites responsivos
+        * Vasta biblioteca
+        * Mais conhecido
