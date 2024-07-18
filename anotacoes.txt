@@ -122,3 +122,32 @@
         * Framework para desenvolvimento de sites responsivos
         * Vasta biblioteca
         * Mais conhecido
+    
+    ## Javascript ##
+        * Interpretada - Rodada em tempo real, não precisa ser compilado.
+        * Baseada em protótipos
+        * Multiparadigma
+        * Comumente utilizada em aplicações web client-side
+        * Segue o padrão ECMAScript
+        # Aplicações
+            * Web
+            * Mobile
+            * Smartwatches
+            * Games
+            * IoT
+            * APIs
+        # DOM (Document Object Model)
+            Estrutura dos elementos:
+            
+                    /> History
+                    |
+            Window -|-> Location
+                    |               /> Heading Level 1 >> Text Node
+                    |              /            /> Text Node
+                    \> Document >> -> Paragraph > Form >> Input [type=text]
+                                |            |       \> input [type=submit]
+                                |             \> Anchor >> Text Node
+                                    \> Heading Level 2 >> Text Node
+                                    \>Anchor >> Text Node
+        
+            

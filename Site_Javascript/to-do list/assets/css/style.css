@@ -1,0 +1,22 @@
+body {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+#addToDoItem {
+    background-color: lightblue;
+    color: rgb(37, 153, 192);
+    border: 1px solid rgb(37, 153, 192);
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+#inputText {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+}
