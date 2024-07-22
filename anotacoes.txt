@@ -150,4 +150,50 @@
                                     \> Heading Level 2 >> Text Node
                                     \>Anchor >> Text Node
         
-            
+            Frameworks e bibliotecas
+                VueJS
+                Angular
+                React
+                jQuery
+        # Sintaxe Básica
+            typeof() - Saber o tipo da variavel
+            variaveis = var  | escopo global e local.
+                        let  | escopo local de bloco.
+                        const| escopo local de bloco. não muda valor.
+            Manipulando Array:
+                forEach() - itera um array
+                push() - add item no final do array
+                pop() - remove item no final do array
+                shift() - remove item no inicio do array
+                unshift() - add item no inicio do array
+                indexof() - retorna o indice de um valor
+                splice() - remove ou substitui um item pelo indice
+                slice() - retorna uma parte de um array existente
+            if ternario:
+                [condicao] ? [instrucao1] : [instrucao2]
+            switch case:
+                switch (condicao){
+                    case (condicao1):
+                        ...
+                        break;
+                    case (condicao2):
+                        ...
+                        break;
+                    default: // se num case for valido, cai no default
+                        ...
+                }
+            funcao sem nome:
+                var variavel = function() {...;}
+            arrow function:
+                var funcao = () => {...;}
+            # Operadores
+                Lógicos
+                && - and
+                || - or
+                !  - not
+                *** Comparação
+                    ==  Igual a
+                    === Mesmo valor e mesmo tipo
+                    !=  Diferente
+                    !== Valor e tipos diferentes
+        Empty, Null, undefined (vazio, nulo [tem o valor null] e undefined [não definido])
