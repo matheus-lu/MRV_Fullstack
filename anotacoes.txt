@@ -197,3 +197,158 @@
                     !=  Diferente
                     !== Valor e tipos diferentes
         Empty, Null, undefined (vazio, nulo [tem o valor null] e undefined [não definido])
+
+        # **** Tipos de funcao ****
+            function nome(parametros){
+                //instrucoes
+                return; // valor de returno
+            }
+            funcao anonima (nao tem nome)
+                const soma = function (a, b) {
+                    return a + b;
+                }
+                soma(1, 2) // 3
+                soma(2, 5) // 7
+            funcao autoinvocavel | IIFE (Immediately invoked function expression) [Usa um (); logo apos a funcao para invocala imediatamente]
+                Ex:
+                (
+                    function(){
+                        let name = "Digital Innovation One";
+                        return name;
+                    }
+                )(//paramentros se necessario);
+            funcao callbacks
+                Passada como argumento para outra funcao
+                Ex: 
+                    const calc = function(operacao, num1, num2){
+                        return operacao(num1, num2);
+                    }
+
+                    const soma = function(num1, num2){
+                        return num1 + num2;
+                    }
+
+                    const sub = function(num1, num2){
+                        return num1 - num2;
+                    }
+
+                    const resultSoma = calc(soma, 1, 2);
+                    const resultSub = calc(sub, 1, 2);
+        
+        Valores padrao (variavel = valorPadrao)
+        
+        Objeto "Arguments" (args) - Iteravel
+            utiliza-se arguments como a variavel da funcao, onde arguments -> todos os argumentos enviados para a funcao
+        
+        Arrays e objetos
+            
+            spread: uma forma de lidar separadamente com elementos do array
+                function sum(x, y, z){
+                    return x + y + z;
+                }
+                const numbers = [1, 2, 3];
+                sum(...numbers); // ... transforma cada parte do array em um elemente independente
+            
+            rest: combina os arugementos em um array
+                function confereTamanho(...args) {
+                    return args.length
+                }
+                confereTamanho() // 0
+                confereTamanho(1, 2) // 2
+                confereTamanho(3, 4, 5) // 3
+        
+        Objetos - Object Destructuring
+            Entre chaves {} podemos filtrar apenas os dados que nos interessam em um objeto.
+                ex: 
+                    const user = {
+                        id: 42,
+                        displayName: 'jdoe',
+                        fullName: {
+                            firstName: 'John',
+                            lastName: 'Doe'
+                        }
+                    };
+
+
+                    function userID({id}) {
+                        return id; // funcao procura a chave ID dentro do objeto user
+                    }
+
+                    function getFullName({fullName: {firstName: first, lastName: last}}){
+                        return `${first} ${last}`;
+                    }
+
+                    userID(user)
+                    // 42
+
+                    getFullName(user)
+                    // John Doe
+        
+        # Loops
+            if/else
+                if () {
+                    ...;
+                } else if {
+                    ...;
+                } else {
+                    ...;
+                }
+            switch/case - compara o tipo e valor sempre === | sempre precisa de um default
+                switch (condicao) {
+                    case valor1:
+                        return x;
+                    case valor2:
+                        return y;
+                    case valor3:
+                        return z;
+                    default:
+                        return w;
+                }
+            for
+                for (let i = 0; i < tamanho; i++) {
+                    ...;
+                }
+                for (variavel in objeto) // retorna todas as propriedades
+
+                for (variavel in objeto) 
+                    objeto[variavel] // retorna somente o valor das propriedades
+                
+                for (letra of palavra) // retorna cada letra da palavra
+                
+                for (numero of array) // retorna cada valor de cada indice do array
+
+            while
+                while(numero <= x) // executa ate que a condicao seja falsa
+
+                do {
+                    ...;
+                } while (numero <= x) // executa pelo menos 1 vez antes de fazer a verificacao, mesmo que ela ja comece como falsa
+        
+        # This
+            Call | Manda o objeto que deseja usar. Pode passar paramentros separados por virgula
+                getSomething.call(objeto);
+            
+            Apply | pode passar paramentros dentro de um array
+                getSomething.apply(objeto);
+
+            Bind | clona a estrutura da funcao onde e chamada e aplica o valor do objeto passado como parametro.
+                const retornaNomes = function(){
+                    return this.nome;
+                };
+                let bruno = retornaNomes.bind({nome: 'Bruno'});
+                bruno();
+                // Bruno
+        
+        # Arrow function | Não faz hoisting (a funcao não pode ser chamada antes de ser criada), sempre em uma const
+            sintaxe: 
+                const helloWorld = () => {
+                    ...;
+                    return "Hello World";
+                }
+
+                const helloWorld = () => "Hello World"; // quando a funcao for pequena, não necessita de return
+                const soma = (a, b) => a + b;
+            restricoes:
+                - nao pode usar as funcoes de this
+                - nao existe arguments
+                - nao pode usar o construtor (new MeuObjeto())
