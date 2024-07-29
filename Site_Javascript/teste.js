@@ -32,3 +32,19 @@ var x = 1; */
 // }
 // let array = [1, 2, 4, 5, 7, 8];
 // returnEvenValues(array);
+
+async function resolvePromise() {
+    const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(console.log('Resolvida'));
+        }, 300);
+    });
+
+    const resolved = await myPromise
+        .then((result) => result + ' passando pelo then')
+        .then((result) => result + ' e agora acabou!')
+        .catch((err) => console.log(err.message))
+    
+    return resolved;
+};
+console.log(resolvePromise());

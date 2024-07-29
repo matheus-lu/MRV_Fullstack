@@ -352,3 +352,132 @@
                 - nao pode usar as funcoes de this
                 - nao existe arguments
                 - nao pode usar o construtor (new MeuObjeto())
+        
+        # Map | const myMap = new Map()
+            - Colecao de arrays no formado [chave, valor];
+            - Pode ser iterado por for... of
+
+            Metodos:
+                myMap.set('apple', 'fruit'); // Map(1) {"apple" => "fruit"}
+                myMap.get("apple"); // "fruit"
+                myMap.delete("apple"); // true
+                myMap.get("apple"); // undefined
+            
+            Map vs Objeto
+                Maps podem ter chaves de qualquer tipo;
+                Possuem length;
+                São mais faceis de iterar;
+                Utilizado quando o valor das chaves é desconhecido;
+                Os valores tem o mesmo tipo.
+        
+        # Set | 
+            Armazenam apenas valores ÚNICOS (não se repetem nunca)
+
+            Métodos:
+                const mySet = new Set();
+                mySet.add(1);
+                mySet.add(5);
+
+                mySet.has(1); // true
+                mySet.has(3); // false
+
+                mySet.delete(5);
+            
+            Set vs Arrays
+                Possuem valores unicos;
+                Em vez da propriedade length, usa-se size;
+                Não possui os métodos map, filter, reduce, etc.
+        
+        # Tratamento de Erros
+            ECMAScript Error
+                Composto por: Mensagem, nome, linha, call stack.
+            
+            DOMException
+                Erros relacionados ao DOM
+            
+            Throw | Return
+                Return - retorna o valor especificado
+                Throw - retorna um erro
+            
+            Try...Catch | Try...Catch...Finally 
+                Catch captura o erro, se ocorrer; 
+                Finally sempre é executado.
+
+            Manipular objeto Error
+                new Error(message, fileName, lineNumber) //fileName e lineNumber não sao padrao em todos os navegadores, olhar a documentacao
+                // todos os paramentros sao opcionais
+
+                const MeuErro = new Error('Mensagem Inválida');
+                MeuErro.name = 'InvalidMessage'
+
+                throw MeuErro;
+
+        # Assincronicidade | não ocorre ou não se efetiva ao mesmo tempo
+            Synchronous
+                Client - Make request -> espera resposta do server, depois continua a aplicacao
+            Asynchronous
+                Client - Make request -> continua a aplicacao e pega a resposta do servidor ao mesmo tempo
+
+            Promises - Inicialmente seu valor é desconhecido. Ela pode ser resolvida ou rejeitada.
+
+                Pending      Resolved    Pending
+                promise ->  .then()  ->  promise
+                        ↘   .catch()    ↗
+                
+                3 estados - Pending, Fulfilled, Rejected
+
+                Exemplo sintaxe:
+                    const myPromise = new Promise((resolve, reject) => {
+                        window.setTimeout(() => {
+                            resolve(console.log('Resolvida!'));
+                        }, 2000);
+                    });
+
+                    await myPromise
+                            .then((result) => result + ' passando pelo then');
+                            .then((result) => result + ' e agora acabou!');
+                            .catch((err) => console.log(err.message));
+            
+            Async/await
+                async function resolvePromise() {
+                    const myPromise = new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            resolve(console.log('Resolvida'));
+                        }, 3000);
+                    });
+
+                    const resolved = await myPromise
+                            .then((result) => result + ' passando pelo then')
+                            .then((result) => result + ' e agora acabou!')
+                            .catch((err) => console.log(err.message))
+                    
+                    return resolved;
+                };
+        
+        # APIs
+            Uma forma de intermediar os resultados do back-end com o que é apresentado no front-end;
+            Pode-se acessa-la por meio de URLs.
+            .json
+        
+            # fetch -- Precisa utilizar o await quando usar o fetch | Retorna uma promise
+                fetch(url, options)
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                Exs:
+                    fetch('https://endereco-api.com', {
+                        method: 'GET',
+                        cache: 'no-cache',
+
+                    })
+                        .then(response => response.json())
+                        .then(json => console.log(json))
+                    
+                    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                    fetch('https://endereco-api.com', {
+                        method: 'POST',
+                        cache: 'no-cache',
+                        body: JSON.stringify(data)
+
+                    })
+                        .then(response => response.json())
+                        .then(json => console.log(json))
